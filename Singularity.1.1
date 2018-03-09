@@ -1,0 +1,28 @@
+Bootstrap:docker
+From:centos:7
+
+%labels
+MAINTAINER baber@iastate.edu
+
+%environment
+
+%post
+yum -y install git python \
+gcc gcc-c++ gcc-gfortran\
+gzip bzip2 \
+findutils \
+make cmake \
+vim \
+wget libXft-devel openssl-devel libXext-devel libxml2-devel \
+readline libquadmath libxslt-devel openmpi-devel openmpi libXScrnSaver-devel \
+gsl-devel libX11-devel freetype-devel
+yum clean all
+
+wget https://github.com/I2PC/scipion/archive/v1.1.tar.gz
+tar xvzf v1.1.tar.gz
+pushd scipion-1.1
+#./scipion config
+#./scipion install -j 10
+
+%runscript
+exec "$@"
