@@ -9,7 +9,7 @@ export PATH=/scipion-1.1/software/bin:/scipion-1.1:$PATH
 
 %post
 yum install -y @"Development Tools"
-yum install -y wget gcc-c++ glibc-headers gcc gcc-g++ cmake java-1.8.0-openjdk-devel.x86_64 libXft-devel.x86_64  openssl-devel.x86_64 libXext-devel.x86_64  libxml++.x86_64 libquadmath-devel.x86_64 libxslt.x86_64 openmpi-devel.x86_64  gsl-devel.x86_64  libX11.x86_64  gcc-gfortran.x86_64 curl wget vim strace
+yum install -y wget gcc-c++ glibc-headers gcc gcc-g++ cmake java-1.8.0-openjdk-devel libXft-devel openssl-devel libXext-devel libxml++ libquadmath-devel libxslt openmpi-devel gsl-devel libX11 gcc-gfortran curl wget vim strace openmpi
 wget https://github.com/I2PC/scipion/archive/v1.1.tar.gz
 tar xvzf v1.1.tar.gz
 pushd scipion-1.1
